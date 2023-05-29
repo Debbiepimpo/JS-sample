@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Handsontable Vanilla Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <script src="src/js/index.js"></script>
+    <script>
+        window.onload = function () {
+            var filas = JSON.parse(localStorage.getItem("filas"));
+
+            if (filas) {
+                var tablaBody = document.getElementById("tablaBody");
+
+                for (var i = 0; i < filas.length; i++) {
+                    var fila = document.createElement("tr");
+
+                    for (var j = 0; j < filas[i].length; j++) {
+                        var celda = document.createElement("td");
+                        celda.innerHTML = filas[i][j];
+                        fila.appendChild(celda);
+                    }
+
+                    tablaBody.appendChild(fila);
+                }
+            }
+        };
+
+
+    </script>
+
+</head>
+
+<body>
+    <table id="mi-tabla" class="editable">
+        <!-- (A) HEADER -->
+        <thead class="tab-title">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <!-- (B) DATA -->
+        <tbody id="tablaBody">
+            <tr>
+                <td>Job Doe</td>
+                <td>job@doe.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="agregarFila()" action="add">Add</button>
+    <button onclick="exportarJSON()" action="export">Exportar JSON</button>
+    <button onclick="borrarUltimaFila()" action="delete">Borrar última fila</button>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "react-tabls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/js/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "live-server": "^1.2.2"
+  }
+}
