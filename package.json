@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/js/index.js"
   },
@@ -15,6 +16,7 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
+    "handsontable": "^12.4.0",
     "jquery": "^2.2.4",
     "live-server": "^1.2.2"
   }
